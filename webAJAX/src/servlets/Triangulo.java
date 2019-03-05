@@ -1,0 +1,48 @@
+package servlets;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/Triangulo")
+public class Triangulo extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    public Triangulo() {
+        super();
+    }
+    
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		int l1 = Integer.parseInt(request.getParameter("lado1"));
+		int l2 = Integer.parseInt(request.getParameter("lado2"));
+		int l3 = Integer.parseInt(request.getParameter("lado3"));
+		int perimetro = l1+l2+l3;
+		
+		response.setContentType("text/html");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter salida = response.getWriter();
+		
+		salida.append("<p>Perímetro: " + perimetro + "</p>");
+		if (l1==l2 && l2==l3) 
+			salida.append("<p>EQUILÁTERO: Tiene los tres lados iguales</p>");
+		else if (l1==l2 || l2==l3 || l1==l3)
+			salida.append("<p>ISÓSCELES: Tiene dos lados iguales</p>");
+		else 
+			salida.append("<p>ESCALENO: Los tres lados son distintos</p>");
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+}

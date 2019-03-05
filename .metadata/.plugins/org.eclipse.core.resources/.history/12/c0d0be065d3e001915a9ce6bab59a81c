@@ -1,0 +1,15 @@
+
+public class Principal {
+
+	public static void main(String[] args) {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			System.out.println("Se ha cargado el driver");
+		} catch (ClassNotFoundException e) {
+			
+			e.printStackTrace();
+			return;
+		}
+	}
+	
+}

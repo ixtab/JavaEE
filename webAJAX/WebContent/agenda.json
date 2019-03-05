@@ -1,0 +1,8 @@
+[
+	{"nombre": "Pepe Sánchez", "tlf": "616667788", "domicilio": "C/ Oca, 25"},
+	{"nombre": "Gloria Sánchez", "tlf": "616668899", "domicilio": "C/ Sol, 25"},
+	{"nombre": "Rosa Sánchez", "tlf": "6777777777", "domicilio": "C/ Sal, 25"},
+	{"nombre": "Carlos Sánchez", "tlf": "688888888", "domicilio": "C/ Limón, 25"},
+	{"nombre": "Miguel Sánchez", "tlf": "699999999", "domicilio": "C/ Pez, 25"},
+	{"nombre": "Pedro Sánchez", "tlf": "610101010", "domicilio": "C/ Luna, 25"}
+]

@@ -1,0 +1,48 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+<meta charset="UTF-8">
+<title>Alquiler de Viviendas</title>
+<style type="text/css" media="screen">
+	form {
+		width: 33%;
+		margin-left: 33%;
+	}
+</style>
+</head>
+<body>
+	<form action="Resultado" method="get" accept-charset="utf-8">
+		<fieldset>
+			<legend>Calcula el precio de tu vivienda</legend>
+			
+			<p><select name="sitio">
+				<option value="20">Leganés (20€/m)</option>
+				<option value="15">Fuenlabrada (15€/m)</option>
+				<option value="14">Móstoles (14€/m)</option>
+				<option value="21">Alcorcón (21€/m)</option>
+			</select></p>
+			
+			<p>
+				<input type="number" name="metros" placeholder="Metros cuadrados" min = "10" required>
+			</p>
+			<p>
+				<label><input type="checkbox" name="cale" value="3"> Calefacción</label> <!-- El valor es el %  que aumenta el precio-->
+				<label><input type="checkbox" name="pisci" value="3"> Piscina</label>
+				<label><input type="checkbox" name="aire" value="3"> Aire Acondicionado</label>
+			</p>
+
+			<p>
+				<label>¿Está en paro?
+					<input type="radio" name="paro" value="4"> Si <!-- El valor es el % que reduce el precio -->
+					<input type="radio" name="paro" value="0" checked> No
+				</label>
+			</p>			
+			<p>
+				<input type="submit" name="boton" value="Consultar">
+			</p>
+		</fieldset>
+	</form>
+</body>
+</html>

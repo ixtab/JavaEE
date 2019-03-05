@@ -1,0 +1,51 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+ <%@page import="java.util.Random" %> <!-- Esto es una directiva y lo de arriba también --> 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!--Declaración, lo que se declara aquí se mantiene para todas las sesiones (durante toda la sesion del servidor). No muestra nada-->
+<%!
+	int contador = 0;  
+	String frase = "Hola";
+%>
+<%!
+	if (Math.random()<0.5){
+		frase = "Adios";
+	}
+%>
+
+
+
+<H1>EXPRESIONES JSP</H1> <!-- Muetra lo que se pone -->
+<p><%= 2*30*java.lang.Math.PI%></p>  
+<p><%= new java.util.Date()%></p>
+<p><%= request.getRemoteHost()%></p>
+<p><%= session.getId()%></p>
+
+
+
+<H1>Scriptlets</H1>  <!-- Se ejecuta una vez por cada requerimiento, no muestra nada -->
+	<%
+		double precio=10;
+		int cantidad=5;
+		String producto="Peras";
+		double subtotal=precio*cantidad;
+		double iva=subtotal*0.16;
+		double total=subtotal+iva;
+		contador ++;  // Se coge la variable de la declaración-
+	%>
+	<p>Nombre artículo:<%= producto %> </p>
+	<p>Precio artículo:<%= precio %> </p>
+	<p>Subtotal: <%= subtotal%> </p>
+	<p>Total IVA incluido: <%= total %> </p>
+	<p> Acessos a la página: <%= contador %> </p>
+	<p><%= frase%></p>
+
+</body>
+</html>
