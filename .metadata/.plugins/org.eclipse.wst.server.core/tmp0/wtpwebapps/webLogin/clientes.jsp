@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+ <%@ page import="datos.LogicaBD" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +21,7 @@
 <p>	<a href="Gestion?accion=Inventario">Inventario</a></p>
 <p>	<a href="Gestion?accion=Clientes">Clientes</a></p>
 <p>	<a href="Gestion?accion=Facturas">Facturas</a></p>
-<h1>Gestión de clientes</h1>
+<%= LogicaBD.tablaClientes() %>
 </body>
 </body>
 </html>

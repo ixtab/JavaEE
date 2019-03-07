@@ -5,6 +5,13 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Acceso al programa</title>
+<style>
+	img {
+			position: fixed;
+			bottom: 0;
+			right: 0;
+	}
+</style>
 </head>
 <body>
 <%

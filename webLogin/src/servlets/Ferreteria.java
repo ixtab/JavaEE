@@ -51,7 +51,7 @@ public class Ferreteria extends HttpServlet {
 		super.init(config);
 		// Lógica de la conexión con la base de datos.
 		ServletContext contextoAplicacion = this.getServletContext();
-		LogicaBD lbd= new LogicaBD("Aquí la lógica de base de datos");
+		LogicaBD lbd= new LogicaBD();
 		contextoAplicacion.setAttribute("miLogicaBD", lbd);
 	}
 
@@ -59,4 +59,11 @@ public class Ferreteria extends HttpServlet {
 			throws ServletException, IOException {
 		doGet(request, response);
 	}
+
+	@Override
+	public void destroy() {
+		LogicaBD.cerrar();
+		super.destroy();
+	}
+	
 }

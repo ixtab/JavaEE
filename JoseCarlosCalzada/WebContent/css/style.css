@@ -1,0 +1,73 @@
+body {
+	font-family: 'Special Elite', cursive;
+	background-color: #eee;
+}
+
+form, .centrar {
+	width: 33%;
+	margin-left: 33%;
+	margin-top: 5%;
+	text-align: center;
+	background-color: white;
+	
+}
+
+.tabla{
+	width: 33%;
+	margin-left: 33%;
+	margin-top: 5%;
+}
+
+.muever{
+	animation:  muever 0.5s 1 ease-out;
+}
+
+.muevel{
+	animation:  muevel 0.5s 1 ease-out;
+}
+
+.muevet{
+	animation:  muevet 0.5s 1 ease-out;
+}
+
+input {
+	border:  none;
+	border-bottom: 1px dotted black;
+	margin: 15px;
+}
+
+
+.shadow {
+	box-shadow: 0px 0px 20px grey;
+	padding: 20px;
+	background-color: white;
+}
+
+li:nth-of-type(odd) {
+  background: #fafafe;
+}
+
+a:hover {
+	font-size: 120%;
+	text-shadow: 0px 0px 1px blue;
+}
+.sesion{
+	position: fixed;
+	top: 0;
+	right: 0;
+	margin-right: 10px;
+}
+
+@keyframes muever {
+	0%{	margin-left:  100%;	transform: rotate(-360deg);}
+	100%{ margin-left: 33%; }
+}
+@keyframes muevel {
+	0%{	margin-left:  -34%;	transform: rotate(-360deg);}
+	100%{ margin-left: 33%; }
+}
+
+@keyframes muevet {
+	0%{	margin-top:  -25%; transform: rotate(-360deg);}
+	100%{ margin-top: 5%; }
+}
